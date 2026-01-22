@@ -649,7 +649,7 @@ cancelExit.onclick = () => {
 /* ===== DIALOG ENGINE ===== */
 const dialogRules = [
   {
-    hasAny: ["merhaba", "selam", "hey", "selamınaleyküm", "meraba"],
+    hasAny: ["merhaba", "selam", "hey", "meraba"],
     replies: [
       "Sonunda. Hiç çözemeyeceksiniz diye düşünmeye başlamıştım",
       "Sonunda. Polis olmayı istediğim günlere pişman oluyordum",
@@ -658,7 +658,7 @@ const dialogRules = [
   },
 
   {
-    hasAny: ["dedektifim", "polis değil", "benim adım", "biz dedektifiz", "adımız", "adım"],
+    hasAny: ["dedektifim", "polis değil", "benim adım", "dedektifiz", "adımız", "adım", "sana ne", "sanane"],
     replies: [
       "her neyse buradaysan dosyaya ulaşmışsın ve polisten iyisin demektir",
       "buradaysan dosyayı seninle paylaşmışlar demektir. yani polise yardım ediyorsun"
@@ -680,11 +680,11 @@ const dialogRules = [
   },
 
 {
-    hasAny: ["katil kim", "katili gördün mü", "katili biliyor musun", "katil sen misin" ],
+    hasAny: ["katil kim", "katili gördün mü", "katili biliyor musun", "katil sen misin", "kim öldürdü", "sen mi öldürdün" ],
     sequence: [
     [
-      "katili yakalayın diye kendimi riske atıyorum",
-      "katil bulunsun diye bunu  yapıyorum zaten"
+      "burada kendimi riske attığımın farkında mısınız",
+      "o kadar kolay mı bunun cevabını almak"
     ],
     [
       "kim olduğunu bilmiyorum ama ben katil değilim",
@@ -694,7 +694,7 @@ const dialogRules = [
   },
 
   {
-    hasAny: ["anlat", "ne biliyo", "ne oldu", "noldu", "ne gördün" ],
+    hasAny: ["anlat", "ne biliyosun", "ne biliyorsun", "ne oldu", "noldu", "ne gördün" ],
     sequence: [
     [
       "o gece kemal oğuz tarıkı inşaata kadar takip etmişti çünkü amacını öğrenmişti",
@@ -708,7 +708,7 @@ const dialogRules = [
   },
 
   {
-    hasAny: ["adam mı", "adam olduğuna emin misin", "kadın olması", "o kadındı", "yüzünü" ],
+    hasAny: ["adam mı", "adam olduğuna emin misin", "kadın olması", "o kadındı", "yüzünü", "adam olamaz", "adam değil" ],
     replies: [
       "yüzünü göremedim ama bir kadın ve adamı ayırt edebilirim",
       "karanlıktı yüzünü seçemedim ama kesinlikle kadın değildi"
@@ -716,7 +716,7 @@ const dialogRules = [
   },
 
   {
-    hasAny: ["ne işin", "neden oradaydın", "neden zülüfteydin", "neden gittin", "sokakta mıydın" ],
+    hasAny: ["ne işin", "neden oradaydın", "neden zülüfteydin", "neden gittin", "sokakta mıydın", "inşaatta mıydın", "neden ordaydın" ],
     sequence: [
     [ 
       "hedefin ben değilim artık doğru yöne odaklan",
