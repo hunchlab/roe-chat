@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -10,6 +11,8 @@
 <style>
 body{
   margin:0;
+  padding:0;
+  width:100%;
   font-family:'Cinzel', serif;
   background:#000;
   color:#e0e0e0;
@@ -17,7 +20,7 @@ body{
   justify-content:center;
   align-items:center;
   height:100vh;
-  overflow:hidden;
+  overflow-x:hidden;
 }
 
 .system-banner{
@@ -69,7 +72,10 @@ button{
 }
 
 /* LOADING */
-#loading{ display:none; }
+
+#loading {
+  display: none;
+}
 
 .loader{
   width:50px;
@@ -96,6 +102,7 @@ button{
 
 .terminal{
   width:600px;
+  max-width:600px;
   background:#050505;
   border:1px solid #222;
   padding:15px;
@@ -276,6 +283,12 @@ button{
   text-align:center;
 }
 
+#login {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
 /* ===== SCROLLBAR (DARK) ===== */
 #chat::-webkit-scrollbar {
   width: 6px;
@@ -298,6 +311,75 @@ button{
   scrollbar-width: thin;
   scrollbar-color: #222 #000;
 }
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  /* LOGIN */
+  #login {
+    width: 100%;
+  }
+
+  .title span {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  input[type="password"] {
+    width: 90vw;
+    max-width: 320px;
+    font-size: 16px;
+    height: 42px;
+  }
+
+  /* LOADING */
+  #loading {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  /* CHAT */
+  .terminal {
+    width: 94vw;
+    max-width: 94vw;
+    padding: 12px;
+  }
+
+  #chat {
+    height: 55vh;
+  }
+
+  .message {
+    max-width: 90%;
+    font-size: 13px;
+  }
+
+  .input-area {
+    gap: 6px;
+  }
+
+  .fake-input {
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .sendBtn {
+    width: 36px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+}
+
 
 </style>
 </head>
